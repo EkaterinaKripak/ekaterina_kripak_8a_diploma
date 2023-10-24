@@ -1,7 +1,7 @@
 #Задание №1
 SELECT c.login,
        COUNT(o."courierId")
-FROM "Couriers" AS c LEFT JOIN "Orders" AS o ON c.id=o."courierId"
+FROM "Couriers" AS c INNER JOIN "Orders" AS o ON c.id=o."courierId"
 WHERE o."InDelivery"=true
 GROUP BY c.login;
 
